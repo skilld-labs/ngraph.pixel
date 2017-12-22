@@ -336,7 +336,8 @@ function pixel(graph, options) {
     scene = new THREE.Scene();
     scene.sortObjects = false;
 
-    camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 20000);
+    //camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 20000);
+    camera = new THREE.OrthographicCamera( container.clientWidth / - 2, container.clientWidth / 2, container.clientHeight / 2, container.clientHeight / - 2, 1, 1000 );
     camera.position.x = 0;
     camera.position.y = 0;
     camera.position.z = 200;
